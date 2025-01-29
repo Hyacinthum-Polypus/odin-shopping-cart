@@ -2,8 +2,21 @@
 
 exports[`App component > renders homepage 1`] = `
 <div>
+  <nav>
+    <ul>
+      <li>
+        Homepage
+      </li>
+      <li>
+        Shopping
+      </li>
+    </ul>
+  </nav>
   <h1>
     Homepage
   </h1>
+  <p>
+    Lorem ipsum sorrum soe rum gaah goo goo gahh gahh waa wahh wahh goo gahh
+  </p>
 </div>
 `;
