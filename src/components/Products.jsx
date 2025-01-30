@@ -1,7 +1,9 @@
-import ProductController from './ProductController'
+import useProducts from "./useProducts"
 
 const Products = () => {
-    const products = ProductController.getProducts().map(product => {
+    const products = useProducts();
+
+    const productsJSX = products.map(product => {
         return (
             <div className="Product" key={product.id}>
                 <h4>{product.title}</h4>
@@ -15,7 +17,7 @@ const Products = () => {
 
     return (
         <div id="Products">
-            {products}
+            {productsJSX}
         </div>
     )
 }
