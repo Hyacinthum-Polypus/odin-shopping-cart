@@ -7,13 +7,9 @@ const Products = ({addToCart}) => {
     const productsJSX = products.map(product => {
         return (
             <ProductCard 
-                title={product.title}
-                price={product.pice}
-                category={product.category}
-                image={product.image}
-                description={product.description}
-                key={product.id}  
-                addToCart={addToCart}          
+                product={product}
+                addToCart={addToCart}
+                key={product.id}          
             />
         )
     })

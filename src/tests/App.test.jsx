@@ -73,11 +73,27 @@ describe("Shopping page", () => {
 
     expect(addToCart).toHaveBeenCalled();
   });
+
+  it("item added to cart", async () => {
+    const user = userEvent.setup();
+  
+    render(<Shopping />);
+  
+    const button = screen.getAllByRole("button", {name:"Add To Cart"})[0];
+    
+    await user.click(button);
+
+    const shoppingCart = screen.getByTestId("shopping-cart");
+
+    const cartItem = shoppingCart.querySelector(".cart-item");
+
+    console.log(shoppingCart.outerHTML);
+
+    expect(cartItem).toBeInTheDocument();
+  });
 });
 
-it("item added to cart", async () => {
-  const user = userEvent.setup();
-})
+
 
 describe("Order quantity", () => {
     it("Test setting order quantity", () => {

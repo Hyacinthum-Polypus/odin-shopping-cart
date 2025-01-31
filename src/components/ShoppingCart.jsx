@@ -1,7 +1,13 @@
-const ShoppingCart = () => {
+import CartItem from "./CartItem";
+
+const ShoppingCart = ({cartItems}) => {
     return (
-        <div id="shppping-cart">
-            <h4>Shopping Cart</h4>
+        <div id="shppping-cart" data-testid="shopping-cart">
+            {
+                cartItems.map(item => {
+                    return <CartItem key={item.id}/>
+                })
+            }
         </div>
     )
 }

@@ -16,6 +16,7 @@ const useFetchedData = (API_URL) => {
   
           const json = await response.json();
           setData(json);
+          setError(null);
         } catch (error) {
           setError(error);
         } finally {
