@@ -55,10 +55,29 @@ describe("Shopping page", () => {
   })
 
 
-  it("Add item to cart", () => {
+  it("product cards have add to cart buttons", () => {
+    render(<Shopping />)
+    const buttons = screen.getAllByRole("button", {name:"Add To Cart"});
+    expect(buttons).length(3);
+  })
 
+
+  it("should call addToCart function when button clicked", async () => {
+    const addToCart = vi.fn();
+    const user = userEvent.setup();
+
+    render(<Products addToCart={addToCart} />);
+    const button = screen.getAllByRole("button", {name:"Add To Cart"})[0];
+
+    await user.click(button);
+
+    expect(addToCart).toHaveBeenCalled();
   });
 });
+
+it("item added to cart", async () => {
+  const user = userEvent.setup();
+})
 
 describe("Order quantity", () => {
     it("Test setting order quantity", () => {

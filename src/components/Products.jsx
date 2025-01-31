@@ -1,7 +1,7 @@
 import useProducts from "./useProducts"
 import ProductCard from "./ProductCard";
 
-const Products = () => {
+const Products = ({addToCart}) => {
     const products = useProducts();
 
     const productsJSX = products.map(product => {
@@ -12,7 +12,8 @@ const Products = () => {
                 category={product.category}
                 image={product.image}
                 description={product.description}
-                key={product.id}            
+                key={product.id}  
+                addToCart={addToCart}          
             />
         )
     })
