@@ -13,9 +13,9 @@ const CartItem = ({product}) => {
                 type="number"
                 value={quantity}
                 min={1}
-                onChange={(event) => setQuantity(event.target.value)}
+                onChange={(event) => setQuantity(Number(event.target.value))}
             />
-            <button onClick={() => setQuantity(quantity - 1)}>&lt;</button>
+            <button onClick={() => quantity > 1 ? setQuantity(quantity - 1) : null}>&lt;</button>
             <button onClick={() => setQuantity(quantity + 1)}>&gt;</button>
         </div>
     )
