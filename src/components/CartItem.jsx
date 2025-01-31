@@ -1,7 +1,22 @@
-const CartItem = () => {
+import { useState } from 'react'
+
+const CartItem = ({product}) => {
+    const [quantity, setQuantity] = useState(1)
+
     return (
         <div className="cart-item">
-            <p>this is a cart item</p>
+            <h4>{product.title}</h4>
+            <h4>Price: {product.price}</h4>
+            <label htmlFor={"quantity-input-" + product.key}>quantity</label>
+            <input 
+                id={"quantity-input-" + product.key} 
+                type="number"
+                value={quantity}
+                min={1}
+                onChange={(event) => setQuantity(event.target.value)}
+            />
+            <button onClick={() => setQuantity(quantity - 1)}>&lt;</button>
+            <button onClick={() => setQuantity(quantity + 1)}>&gt;</button>
         </div>
     )
 }
