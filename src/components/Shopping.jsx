@@ -7,8 +7,7 @@ const Shopping = () => {
     const [cartItems, setCartItems] = useState([]);
 
     const addToCart = (product) => {
-        console.log("Added item to cart: ", product);
-        setCartItems([...cartItems, product]);
+        setCartItems([...cartItems, {...product, key:crypto.randomUUID()}]);
     }
 
     return (

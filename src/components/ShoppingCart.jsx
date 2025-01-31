@@ -4,10 +4,9 @@ const ShoppingCart = ({cartItems}) => {
     return (
         <div id="shppping-cart" data-testid="shopping-cart">
             {
-                cartItems.map(item => {
-                    return <CartItem key={item.id}/>
-                })
+                cartItems.map(item => <CartItem key={item.key} product={item} />)
             }
+            <button>Checkout</button>
         </div>
     )
 }

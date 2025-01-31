@@ -91,6 +91,16 @@ describe("Shopping page", () => {
 
     expect(cartItem).toBeInTheDocument();
   });
+
+  it("item is not added to cart", () => {
+    render(<Shopping />);
+
+    const shoppingCart = screen.getByTestId("shopping-cart");
+
+    const cartItem = shoppingCart.querySelector(".cart-item");
+
+    expect(cartItem).not.toBeInTheDocument();
+  })
 });
 
 
