@@ -1,0 +1,16 @@
+#shopping {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#products {
+    grid-column: 1;
+}
+
+#shopping-cart {
+    grid-column: 2;
+}
+
+.product img {
+    height: 250px;
+}

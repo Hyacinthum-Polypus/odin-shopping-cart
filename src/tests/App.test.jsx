@@ -88,8 +88,6 @@ describe("Shopping page", () => {
 
     const cartItem = shoppingCart.querySelector(".cart-item");
 
-    console.log(shoppingCart.outerHTML);
-
     expect(cartItem).toBeInTheDocument();
   });
 

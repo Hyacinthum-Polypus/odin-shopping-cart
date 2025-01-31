@@ -15,7 +15,8 @@ const Products = ({addToCart}) => {
     })
 
     return (
-        <div id="Products">
+        <div id="products">
+            <h1>Products</h1>
             {productsJSX}
         </div>
     )
