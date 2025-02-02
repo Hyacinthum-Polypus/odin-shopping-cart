@@ -13,7 +13,9 @@ const ShoppingCart = () => {
                 {
                     cartItems.map(item => <CartItem key={item.key} product={item} setQuantity={setQuantity} />)
                 }
-                    <h4>Total: </h4>
+                    <h4>Total: ${cartItems.reduce((accum, current) => {
+                        return accum += current.price * current.quantity;
+                    }, 0)}</h4>
                     <button id="checkout">Checkout</button>
             </div>
         </div>
