@@ -30,3 +30,7 @@ a {
     font-size:x-large;
     font-weight:bold;
 }
+
+.numItems {
+    color: red;
+}
