@@ -20,3 +20,10 @@ nav ul {
     justify-content: center;
     list-style-type: none;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size:x-large;
+    font-weight:bold;
+}
