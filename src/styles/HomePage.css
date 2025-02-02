@@ -1,0 +1,19 @@
+.banner-imgs {
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.5s ease-in-out;
+}
+
+.banner-imgs > img {
+    width: 100vw;
+}
+
+.banner > button {
+    position: absolute;
+    font-size: x-large;
+    bottom: 30%;
+}
+
+.banner > button.right {
+    left: 96%;
+}
