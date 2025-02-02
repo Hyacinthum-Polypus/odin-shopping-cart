@@ -12,14 +12,11 @@ const Shopping = () => {
     }
 
     return (
-        <>
-            <NavBar />
-            <div id="shopping">
-                <h1>Shopping Page</h1>
-                <Products addToCart={addToCart}/>
-                <ShoppingCart cartItems={cartItems}/>
-            </div>
-        </>
+        <div id="shopping">
+            <h1>Shopping Page</h1>
+            <Products addToCart={addToCart}/>
+            <ShoppingCart cartItems={cartItems}/>
+        </div>
     )
 }
 

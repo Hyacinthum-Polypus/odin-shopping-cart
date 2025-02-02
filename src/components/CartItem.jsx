@@ -7,7 +7,7 @@ const CartItem = ({product}) => {
         <div className="cart-item">
             <h4>{product.title}</h4>
             <h4>Price: {product.price}</h4>
-            <label htmlFor={"quantity-input-" + product.key}>quantity</label>
+            <label htmlFor={"quantity-input-" + product.key}>Quantity: </label>
             <input 
                 id={"quantity-input-" + product.key} 
                 type="number"

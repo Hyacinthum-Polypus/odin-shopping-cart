@@ -1,12 +1,12 @@
 import NavBar from './components/NavBar'
+import { Outlet } from "react-router-dom"
 
 const App = () => {
   
   return (
     <>
       <NavBar />
-      <h1>Homepage</h1>
-      <p>Lorem ipsum sorrum soe rum gaah goo goo gahh gahh waa wahh wahh goo gahh</p>
+      <Outlet />
     </>
   )
 }
