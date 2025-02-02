@@ -1,7 +1,8 @@
 import { useState } from 'react'
 
-const CartItem = ({product}) => {
-    const [quantity, setQuantity] = useState(1)
+const CartItem = ({product, quantity, setQuantity}) => {
+    //const [quantity, setQuantity] = useState(1)
+
 
     return (
         <div className="cart-item">
@@ -11,13 +12,13 @@ const CartItem = ({product}) => {
             <input 
                 id={"quantity-input-" + product.key} 
                 type="number"
-                value={quantity}
+                value={product.quantity}
                 min={1}
-                onChange={(event) => setQuantity(Number(event.target.value))}
+                onChange={(event) => setQuantity(product.key, Number(event.target.value))}
             />
-            <div class="quantity-buttons">
-                <button onClick={() => quantity > 1 ? setQuantity(quantity - 1) : null}>&lt;</button>
-                <button onClick={() => setQuantity(quantity + 1)}>&gt;</button>
+            <div className="quantity-buttons">
+                <button onClick={() => product.quantity > 1 ? setQuantity(product.key, product.quantity - 1) : null}>&lt;</button>
+                <button onClick={() => setQuantity(product.key, product.quantity + 1)}>&gt;</button>
             </div>
         </div>
     )

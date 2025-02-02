@@ -7,14 +7,21 @@ import './App.css'
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
 
+
   const addToCart = (product) => {
-      setCartItems([...cartItems, {...product, key:crypto.randomUUID()}]);
+    setCartItems([...cartItems, {...product, quantity: 1, key:crypto.randomUUID()}]);
   }
 
+  const setQuantity = (key, quantity) => {
+    const index = cartItems.findIndex((item) => item.key === key);
+    const newCartItems = structuredClone(cartItems);
+    newCartItems[index].quantity = quantity;
+    setCartItems(newCartItems);
+  }
   
   return (
     <>
-      <ShopContext.Provider value={{cartItems, addToCart}}>
+      <ShopContext.Provider value={{cartItems, addToCart, setQuantity}}>
         <NavBar />
         <div className="app-body">
           <Outlet />
