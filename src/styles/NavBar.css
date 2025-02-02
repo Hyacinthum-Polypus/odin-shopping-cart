@@ -1,0 +1,22 @@
+#logo {
+    height: 125px;
+}
+
+#nav-bar {
+    background-color: #cfc9b6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    list-style-type: none;
+}

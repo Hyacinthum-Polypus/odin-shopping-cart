@@ -1,0 +1,34 @@
+#products {
+    display: flex;
+    flex-direction: column;
+}
+
+.product {
+    min-width: 0;
+    max-width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 100px;
+    padding: 0 150px 0 150px;
+    background-color: white;
+    box-shadow: -10px 10px 20px gray;
+}
+
+.product * {
+    background-color: white;
+}
+
+.product button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.product img {
+    width: 40%;
+}
+
+#products > h1 {
+    text-align: center;
+}

@@ -1,6 +1,15 @@
 #shopping {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+
+#shopping h1 {
+    background-color: white;
+    margin: auto;
+    margin-bottom: 25px;
+    padding: 10px;
+    box-shadow: -10px 10px 20px gray;
 }
 
 #products {
@@ -9,8 +18,4 @@
 
 #shopping-cart {
     grid-column: 2;
-}
-
-.product img {
-    height: 250px;
 }
