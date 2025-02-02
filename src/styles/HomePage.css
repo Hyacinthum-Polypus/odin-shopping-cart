@@ -4,6 +4,10 @@
     transition: transform 0.5s ease-in-out;
 }
 
+.banner {
+    position: absolute;
+}
+
 .banner-imgs > img {
     width: 100vw;
 }
@@ -11,9 +15,9 @@
 .banner > button {
     position: absolute;
     font-size: x-large;
-    bottom: 30%;
+    bottom: 50%;
 }
 
 .banner > button.right {
-    left: 96%;
+    left: 31%;
 }
