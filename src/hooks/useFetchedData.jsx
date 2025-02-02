@@ -29,7 +29,7 @@ const useFetchedData = (API_URL) => {
       return () => {
         abortController.abort();
       };
-    }, []);
+    }, [API_URL]);
   
     return { data, error, loading };
 };
