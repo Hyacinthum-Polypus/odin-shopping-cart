@@ -1,4 +1,10 @@
-const ProductCard = ({product, addToCart}) => {
+import { useContext } from 'react'
+import ShopContext from '../contexts/ShopContext'
+
+const ProductCard = ({product}) => {
+    const { addToCart } = useContext(ShopContext);
+
+
     return (
         <div className="product">
             <h4>{product.title}</h4>

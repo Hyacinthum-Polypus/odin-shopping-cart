@@ -1,14 +1,13 @@
-import useProducts from "./useProducts"
+import useProducts from "../hooks/useProducts"
 import ProductCard from "./ProductCard";
 
-const Products = ({addToCart}) => {
+const Products = () => {
     const products = useProducts();
 
     const productsJSX = products.map(product => {
         return (
             <ProductCard 
                 product={product}
-                addToCart={addToCart}
                 key={product.id}          
             />
         )

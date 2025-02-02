@@ -1,6 +1,10 @@
 import CartItem from "./CartItem";
+import ShoppingContext from '../contexts/ShopContext'
+import { useContext } from 'react'
 
-const ShoppingCart = ({cartItems}) => {
+const ShoppingCart = () => {
+    const { cartItems } = useContext(ShoppingContext);
+
     return (
         <div id="shppping-cart" data-testid="shopping-cart">
             <h1>Shopping Cart</h1>
